@@ -53,8 +53,6 @@ function App() {
         }
 
         setPokemonDetails(pokeDetails)
-        console.log(evolutions.chain)
-        console.log(pokeDetails)
     }
 
     return (
