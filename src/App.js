@@ -27,8 +27,9 @@ function App() {
 
     const onGetDetails = (name) => async () => {
         const typesAndMoves = await fetchPokemonDetailsByName(name)
-        const speciesId = await fetchPokemonSpeciesByName(name)
-        const evolutions = await fetchEvolutionChainById(speciesId.evolution_chain.url.split('/')[6])
+        const species = await fetchPokemonSpeciesByName(name)
+        //Figured I snag the ID from the url to use the given function rather than write a new fetch function for the given URL
+        const evolutions = await fetchEvolutionChainById(species.evolution_chain.url.split('/')[6])
         
         //Recursively retrieves evolutions from deeply nested object
         const evolutionChain = []
@@ -53,8 +54,6 @@ function App() {
         }
 
         setPokemonDetails(pokeDetails)
-        console.log(evolutions.chain)
-        console.log(pokeDetails)
     }
 
     return (
