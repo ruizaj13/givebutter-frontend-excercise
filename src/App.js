@@ -27,8 +27,9 @@ function App() {
 
     const onGetDetails = (name) => async () => {
         const typesAndMoves = await fetchPokemonDetailsByName(name)
-        const speciesId = await fetchPokemonSpeciesByName(name)
-        const evolutions = await fetchEvolutionChainById(speciesId.evolution_chain.url.split('/')[6])
+        const species = await fetchPokemonSpeciesByName(name)
+        //Rather than write a fetch function for the provided url I figure I can just snag the ID and use the provided function
+        const evolutions = await fetchEvolutionChainById(species.evolution_chain.url.split('/')[6])
         
         //Recursively retrieves evolutions from deeply nested object
         const evolutionChain = []
