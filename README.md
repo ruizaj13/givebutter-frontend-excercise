@@ -48,6 +48,12 @@ Please take some time to answer the following questions. Your answers should go 
 
 - Given more time, what would you suggest for improving the performance of this app?
 
+    I'd suggest implementing some sort of virtualization library or lazy loading library to more effectively render the large list of items. It's not too bad when limited to 151 items but the larger that list gets the more the performance will degrade. Infinite scroll while using the API's offset parameter could do the job aswell so we don't pull everything all at once. If it were an option, I would look at restructuring the backend aswell in order to reduce the workload on the client to have to pull from multiple endpoints for data that could be provided in one go from a single endpoint.
+
 - Is there anything you would consider doing if we were to go live with this app?
 
+    Everything mentioned above to improve performance along with taking the time to ensure the page is responsive for multiple screen sizes. Using a CSS pre-processor would be good too. Not only for performance but for code readability and maintainability aswell. On that note, I would also go through and break up the App.js file into seperate component files too. Production code should always be as readable and as maintainable as possible.
+
 - What was the most challenging aspect of this work for you (if at all)?
+
+    Working with the API itself was a bit of a challenge. The deeply nested evolution chain and finding where to get the proper species id to then pull the correct evolution chains caught me off gaurd. It was a fun problem to solve though. Just had to look into the documentation a bit.
