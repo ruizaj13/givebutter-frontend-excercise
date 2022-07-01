@@ -52,7 +52,7 @@ Please take some time to answer the following questions. Your answers should go 
 
 - Is there anything you would consider doing if we were to go live with this app?
 
-    Everything mentioned above to improve performance along with taking the time to ensure the page is responsive for multiple screen sizes. Using a CSS pre-processor would be good too. Not only for performance but for code readability and maintainability aswell. On that note, I would also go through and break up the App.js file into seperate component files too. Production code should always be as readable and as maintainable as possible.
+    Everything mentioned above to improve performance along with taking the time to ensure the page is responsive for multiple screen sizes. Using a CSS pre-processor would be good too. Not only for performance but for code readability and maintainability aswell. On that note, I would also go through and break up the App.js file into seperate component files too. Production code should always be as readable and as maintainable as possible. Can't forget the smaller things aswell like SEO and giving it a proper tab name and favicon.
 
 - What was the most challenging aspect of this work for you (if at all)?
 
