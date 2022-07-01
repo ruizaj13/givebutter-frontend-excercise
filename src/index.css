@@ -32,6 +32,7 @@ body {
   width: 14rem;
   border: 2px solid red;
   max-height: 60.5vh;
+  height: fit-content;
   overflow: hidden;
   overflow-y: auto;
   border-radius: 3px;
@@ -42,7 +43,7 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: baseline;
-  padding: 1em;
+  padding: 1rem;
   border-bottom: 1.5px solid black;
 }
 
@@ -51,4 +52,29 @@ body {
 }
 
 .pokedex__details {
+  border: 2px solid black;
+  border-radius: 3px;
+  margin-top: 1rem;
+  width: 17.2rem;
+  height: 14.9rem;
+}
+
+.pokedex__details p {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.evolutions {
+  margin-top: .5rem;
+}
+
+.details {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.pokedex__evolution-chain {
+  display: flex;
+  justify-content: space-evenly;
 }
